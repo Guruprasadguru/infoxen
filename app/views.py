@@ -8,7 +8,7 @@ from rest_framework.pagination import PageNumberPagination
 
 
 class LeadApiView(ListCreateAPIView):
-    queryset = Lead.objects.all().order_by('time_stamp')
+    queryset = Lead.objects.all().order_by('-time_stamp')
     serializer_class = Leadserializer
     pagination_class = PageNumberPagination
 
